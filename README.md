@@ -1,4 +1,4 @@
-# home-data-center
+# Home Data Center
 This repository contains information about how to set up a home data center to sync your data from your phone to the home data center
 
 # components used
