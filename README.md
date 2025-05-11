@@ -4,12 +4,13 @@ This repository contains information about how to set up a home data center to s
 # Table of contents
 
 - [Sync Photos and Videos from Phone to Home Cloud](#sync-photos-from-phone-to-cloud)
-  - [Hardware Needed](1-hardware-needed)
-  - [Setup Procedure](1-procedure)
-    - [Installing Ubuntu OS on Raspberry Pi and bringup](installing-ubuntu)
-    - [Setup the Hard Disk on Pi](setup-harddisk)
-    - [Install Docker on the Raspberry Pi](installing-docker)
-    - [Install Portainer to manage all Containers](installing-porter)
+  - [Hardware Needed](#1-hardware-needed)
+  - [Setup Procedure](#1-procedure)
+    - [Installing Ubuntu OS on Raspberry Pi and bringup](#installing-ubuntu)
+    - [Setup the Hard Disk on Pi](#setup-harddisk)
+    - [Install Docker on the Raspberry Pi](#installing-docker)
+    - [Install Portainer to manage all Containers](#installing-porter)
+    - [Install Immich and add to Portainer](#installing-immich)
 
 
 # Sync Photos and Videos from Phone to Home Cloud <a name="sync-photos-from-phone-to-cloud"></a>
@@ -96,5 +97,5 @@ docker compose up -d
 7. Sign up for the Portainer and remember the credentials.
 8. Under Portainer, you will notice the environment as `local` pointing to the docker in the local environment. Clicking on it, you can now view the 1 stack for `portainer`, a list of `images`, and `containers` created under it.
 
-### Add a Stack for Immich
+### Install Immich and add to Portainer <a name="installing-immich"></a>
 1. 
