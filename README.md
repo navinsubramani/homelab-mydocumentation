@@ -11,7 +11,7 @@ This repository contains information about how to set up a home data center to s
 ### Installing Ubuntu OS on Raspberry Pi and bringup
 1. Download the `latest Ubuntu OS` for Pi from [here](https://ubuntu.com/download/raspberry-pi). Review if this is supported for the model of pi that you have.
 2. Install OS using the `PI Manager` [Raspberry Pi Manager](https://www.raspberrypi.com/software/) on the SD card.
-3. Mount and set up the PI. Ensure to connect the PI to your home network through WIFI or LAN.
+3. Mount and set up the PI. Please make sure to connect the PI to your home network through WIFI or LAN.
 
 ### Setup the Hard Disk on Pi
 1. Once the Hard Disk is connected to the Pi, Open `Disks` and you will notice the SD Card reader and Hard Disk.
@@ -25,14 +25,29 @@ Display Name = "saysomename" # Provide a display name
 Mount Point = "/mnt/saysomename"
 ```
 4. Start the Volumes in `Disks`
-5. Under contents check if the `mounted at path` is valid based on your above configuration, and it is accessible.
+5. Under contents, check if the `mounted at path` is valid based on your above configuration, and it is accessible.
 
 ### Install Docker on the Raspberry Pi
-_NOTE:_ All services are installed as docker images/container, so docker is used to host different services on the Pi.
 
 1. Follow the Instructions from [Digital Ocean Guide](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04) on how to install Docker for the specific version of Ubuntu.
 
+_NOTE:_ All services are installed as Docker images/containers, so Docker is used to host different services on the Pi.
+
 _NOTE:_  Install Docker engine, add current user to Docker so Docker functions work without sudo, test downloading images, and creating containers.
+
 _NOTE:_  On Docker permission denied error, please follow one of the methods to fix it. [Fix for Docker Permission Denied](https://phoenixnap.com/kb/docker-permission-denied)
 
-### 
+### Install Portainer to manage all Containers
+1. Read about [Portainer](https://www.portainer.io/). Portainer is a container management solution that manages containers from different environments from a single place through the browser. Using this, we can control the Pi services without logging into Pi. For this application, Portainer will manage only the local environment.
+2. Install Portainer from the Hard Disk to separate the data from the Raspberry Pi: Go to `Hard Disk` --> Create a folder `docker/portainer`
+3. Under this folder, create a file called `docker-compose.yaml`
+
+```
+touch docker-compose.yaml
+```
+
+4. Edit the `docker-compose.yaml` file and copy and paste the below configuration. Edit only the commented sections below based on your configuration.
+
+```
+
+```
