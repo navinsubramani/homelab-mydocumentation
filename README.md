@@ -3,7 +3,7 @@ This repository contains information about how to set up a home data center to s
 
 # Table of contents
 
-- [Sync Photos and Videos from Phone to Home Cloud](#sync-photos-from-phone-to-cloud)
+- [Sync Photos and Videos from Phone to Home Cloud (Locally)](#sync-photos-from-phone-to-cloud)
   - [Hardware Needed](#1-hardware-needed)
   - [Setup Procedure](#1-procedure)
     - [Installing Ubuntu OS on Raspberry Pi and bringup](#installing-ubuntu)
