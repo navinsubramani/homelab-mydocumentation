@@ -1,7 +1,10 @@
 # Home Data Center
 This repository contains information about how to set up a home data center to sync your data from your phone to the home data center
 
-# Sync Photos and Videos from Phone to Home Cloud
+# Table of contents
+1. [Sync Photos and Videos from Phone to Home Cloud](#sync-photos-from-phone-to-cloud)
+
+# Sync Photos and Videos from Phone to Home Cloud <a name="sync-photos-from-phone-to-cloud"></a>
 
 ## Hardware Needed
 1. Raspberry Pi 5 (8GB RAM, 16GB SD card, and its kit)
