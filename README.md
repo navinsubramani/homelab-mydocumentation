@@ -2,6 +2,7 @@
 This repository contains information about how to set up a home data center to sync your data from your phone to the home data center
 
 # Table of contents
+
 - [Sync Photos and Videos from Phone to Home Cloud](#sync-photos-from-phone-to-cloud)
   - [Hardware Needed](1-hardware-needed)
   - [Setup Procedure](1-procedure)
@@ -9,6 +10,7 @@ This repository contains information about how to set up a home data center to s
     - [Setup the Hard Disk on Pi](setup-harddisk)
     - [Install Docker on the Raspberry Pi](installing-docker)
     - [Install Portainer to manage all Containers](installing-porter)
+
 
 # Sync Photos and Videos from Phone to Home Cloud <a name="sync-photos-from-phone-to-cloud"></a>
 
