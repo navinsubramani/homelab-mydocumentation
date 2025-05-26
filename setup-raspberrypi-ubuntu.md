@@ -4,6 +4,7 @@
 - [Setup the Hard Disk on Pi](#setup-harddisk)
 - [Install Docker on the Raspberry Pi](#installing-docker)
 - [Install Ruskdesk on Raspberry Pi](#setup-ruskdesk)
+- [Install htop to monitor the system](#install-htop-to-monitor-the-system)
 
 
 # Hardware Needed <a name="1-hardware-needed"></a>
@@ -44,3 +45,14 @@ _NOTE:_  On Docker permission denied error, please follow one of the methods to 
 1. Follow the instructions from [Ruskdesk](https://rustdesk.com/)
 
 _NOTE:_ Ruskdesk is a remote desktop solution that allows you to access your Pi from anywhere. It is an open-source alternative to TeamViewer and AnyDesk.
+
+
+# Install htop to monitor the system
+1. Install `htop` to monitor the system performance.
+   ```bash
+   sudo apt install htop
+   ```
+2. Run `htop` to monitor the system performance.
+   ```bash
+    htop
+    ```
