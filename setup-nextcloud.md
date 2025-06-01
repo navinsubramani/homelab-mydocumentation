@@ -10,6 +10,8 @@
 - [Setup Collabora in Nextcloud for editing documents](#setup-collabora)
 - [Troubleshooting Collabora Issues](#troubleshooting-collabora)
   - [Collabora shows socket error when trying to edit a document](#collabora-socket-error)
+- [Setup Next Cloud Client on your devices](#setup-next-cloud-client-on-your-devices)
+    - [on iOS](#on-ios)
 
 
 
@@ -189,3 +191,12 @@ I follower the steps mentioned in the link, by updating the `config.php` file to
 'overwriteprotocol' => 'https',
 ```
 This fixed the issue for me and was able to edit documents in Nextcloud using Collabora.
+
+
+# Setup Next Cloud Client on your devices
+
+## on iOS
+1. Download the Nextcloud app from the [App Store](https://apps.apple.com/us/app/nextcloud/id1125420102).
+2. Open the app and enter your Nextcloud server URL (e.g., `https://your-nextcloud-domain`).
+3. Log in with your Nextcloud username and password.
+4. Once logged in, you can access your files, upload photos, and sync data between your iOS device and Nextcloud.
