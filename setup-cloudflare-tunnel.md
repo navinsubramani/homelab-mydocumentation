@@ -5,7 +5,8 @@
 - [Setup Cloudflare Tunnel](#setup-cloudflare-tunnel)
 - [Setup Cloudflare Service on your Server](#setup-cloudflare-service-on-your-server)
 - [Test the Clouflare Tunnel Connections](#test-the-clouflare-tunnel-connections)
-- [Configure Securtity Settings using Application and Policies](#configure-securtity-settings-using-application-and-policies)
+- [Configure Security Settings using Application and Policies](#configure-security-settings-using-application-and-policies)
+- [Configure Security using WAF](#configure-security-using-waf)
 - [Test the Cloudflare Access Application](#test-the-cloudflare-access-application)
 
 
@@ -82,7 +83,7 @@ TOKEN=your_tunnel_token_here
 1. Simply open a web browser and navigate to the hostname you configured in the Cloudflare tunnel (e.g., `https://immich.yourdomain.com` or `authentik.yourdomain.com`).
 2. You should be able to access your services securely through the Cloudflare tunnel without exposing your server's IP address directly to the internet.
 
-# Configure Securtity Settings using Application and Policies
+# Configure Security Settings using Application and Policies
 1. In the Cloudflare dashboard, go to the "Zero Trust" tab and click on `Access` -> `Applications`.
 2. Click on `Add an application` and select `Self-hosted`.
 3. Enter the name of you application (e.g., `homelab`) and the hostname you configured in the Cloudflare tunnel (e.g., `immich.yourdomain.com`).
@@ -93,6 +94,12 @@ TOKEN=your_tunnel_token_here
     - Default is `One-time PIN` which is a good option for personal use.
     - You can skip other options as we will probably use `Authentik` as our Identity Provider, unless you want to use other methods.
 6. Click `Save` to create the application and you should see the status as `Healthy` once the application is created successfully.
+
+# Configure Security using WAF
+1. In the Cloudflare dashboard, go to the "Security" tab and click on `WAF` (Web Application Firewall).
+2. Enable the WAF for your domain if it is not already enabled.
+3. Add a `custom rule` to block access from a specific country or IP address.
+   - For example, you can create a rule to block access from a specific country by selecting the `Country` field and choosing the country you want not to block and selecting the `Action` as `Block`.
 
 # Test the Cloudflare Access Application
 1. Based on your configured `policies`, you will be prompted to log in using the configured login method when you try to access the application.
