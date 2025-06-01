@@ -1,5 +1,6 @@
 # Table of Contents
 - [Install Portainer to manage all Containers](#installing-porter)
+- [Configure Portainer with OAuth](#configure-portainer-oauth)
 
 
 # Install Portainer to manage all Containers <a name="installing-porter"></a>
@@ -52,3 +53,8 @@ docker compose up -d
 
 
 _NOTE:_ Portainer is used to manage all the containers and images created on the Pi. It provides a user-friendly interface to manage Docker containers, images, networks, and volumes.
+
+# Configure Portainer with OAuth <a name="configure-portainer-oauth"></a>
+1. Portainer supports OAuth authentication, which allows you to use external identity providers for user management. This is useful for managing access to your Portainer instance.
+2. To configure OAuth in Portainer, you can setup a inhouse OAuth server using [Authentik](setup-authentik.md) and create applications and providers for Portainer.
+3. Once you have Authentik set up, you can configure Portainer to use Authentik as an OAuth provider following steps from the [Authentik: Integrate with Portainer](https://docs.goauthentik.io/integrations/services/portainer/).

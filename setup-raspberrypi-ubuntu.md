@@ -4,7 +4,9 @@
 - [Setup the Hard Disk on Pi](#setup-harddisk)
 - [Install Docker on the Raspberry Pi](#installing-docker)
 - [Install Ruskdesk on Raspberry Pi](#setup-ruskdesk)
-- [Install htop to monitor the system](#install-htop-to-monitor-the-system)
+- [SSH into the pi from remote computer](#ssh-into-the-pi-from-remote-computer)
+   - [Install htop to monitor the system](#install-htop-to-monitor-the-system)
+   - [Identify the PUID and PGID](#identify-the-puid-and-pgid)
 
 
 # Hardware Needed <a name="1-hardware-needed"></a>
@@ -47,7 +49,17 @@ _NOTE:_  On Docker permission denied error, please follow one of the methods to 
 _NOTE:_ Ruskdesk is a remote desktop solution that allows you to access your Pi from anywhere. It is an open-source alternative to TeamViewer and AnyDesk.
 
 
-# Install htop to monitor the system
+# SSH into the pi from remote computer
+1. Open a terminal on your remote computer.
+2. Use the following command to SSH into the Pi:
+   ```bash
+   ssh username@ip_address_of_pi
+   ```
+   Replace `username` with your Pi's username and `ip_address_of_pi` with the actual IP address of your Raspberry Pi.
+3. If prompted, enter the password for the Pi.
+4. Once logged in, you can run commands on the Pi as if you were using it directly.
+
+## Install htop to monitor the system
 1. Install `htop` to monitor the system performance.
    ```bash
    sudo apt install htop
@@ -56,3 +68,10 @@ _NOTE:_ Ruskdesk is a remote desktop solution that allows you to access your Pi 
    ```bash
     htop
     ```
+
+## Identify the PUID and PGID
+1. To find the PUID and PGID of the current user, run the following command:
+   ```bash
+   id <username>
+   ``` 
+   Replace `<username>` with your actual username.
