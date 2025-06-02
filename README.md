@@ -8,6 +8,7 @@ This repository contains information about how to set up a home lab like your ow
 # List of Setup Guides
 
 - [Setup Raspberry Pi, Ubuntu OS, Docker and required tools](setup-raspberrypi-ubuntu.md)
+- [Setup Proxmox for Virtualization](setup-proxmox.md)
 - [Setup Portainer to manage all environments, stacks and containers](setup-portainer.md)
 - [Setup Immich for Photo Cloud](setup-immich.md)
 - [Setup Authentik for Identity Provider](setup-authentik.md)
