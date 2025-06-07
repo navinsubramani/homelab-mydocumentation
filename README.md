@@ -5,6 +5,9 @@ This repository contains information about how to set up a home lab like your ow
 
 ![Home Data Center](static/system_overview.PNG)
 
+# Dashboard
+![HomeLab Dashboard](static/dashboard-basic.PNG)
+
 # List of Setup Guides
 
 - [Setup Raspberry Pi, Ubuntu OS, Docker and required tools](setup-raspberrypi-ubuntu.md)
