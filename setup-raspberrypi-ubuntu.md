@@ -7,6 +7,9 @@
 - [SSH into the pi from remote computer](#ssh-into-the-pi-from-remote-computer)
    - [Install htop to monitor the system](#install-htop-to-monitor-the-system)
    - [Identify the PUID and PGID](#identify-the-puid-and-pgid)
+   - [Edit a file within a container](#edit-a-file-within-a-container)
+   - [Copy a file from the container to the host machine and back](#copy-a-file-from-the-container-to-the-host-machine-and-back)
+   
 
 
 # Hardware Needed <a name="1-hardware-needed"></a>
@@ -75,3 +78,29 @@ _NOTE:_ Ruskdesk is a remote desktop solution that allows you to access your Pi 
    id <username>
    ``` 
    Replace `<username>` with your actual username.
+
+
+## Edit a file within a container
+1. First, find the container ID or name of the running container using the following command:
+   ```bash
+   docker ps
+   ```
+2. Once you have the container ID or name, you can use the following command to open a shell session within the container:
+   ```bash
+   docker exec -it <container_id_or_name> /bin/bash
+   ```   Replace `<container_id_or_name>` with the actual container ID or name.
+3. Once inside the container, you can use a text editor like `vi` or `nano` to edit files. For example, to edit a file named `example.txt`, you can use the following command:
+   ```bash
+   vi example.txt
+   ```
+
+## Copy a file from the container to the host machine and back
+1. To copy a file from the container to the host machine, use the following command:
+   ```bash
+   docker cp <container_id_or_name>:<path_to_file_in_container> <path_on_host_machine>
+   ```
+   Replace `<container_id_or_name>` with the actual container ID or name, `<path_to_file_in_container>` with the path to the file inside the container, and `<path_on_host_machine>` with the destination path on the host machine.
+2. To copy a file from the host machine to the container, use the following command:
+   ```bash
+   docker cp <path_on_host_machine> <container_id_or_name>:<path_to_file_in_container>
+   ```

@@ -2,6 +2,7 @@
 # Table of Contents
 - [Install Nextcloud on a Docker Compose Stack](#installing-nextcloud)
 - [Configure Nextcloud](#configure-nextcloud)
+  - [Configure Two Factor Authentication in Nextcloud](#configure-two-factor-authentication-in-nextcloud)
 - [Troubleshooting Nextcloud Issues](#troubleshooting-nextcloud)
   - [Connection to database or SQLDB failed to authorize the admin user](#connection-to-database-issue)
   - [Incorrect username or password while logging in](#incorrect-username-or-password)
@@ -59,7 +60,7 @@ services:
     restart: unless-stopped
     command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
     volumes:
-      - /mnt/somefolder/docker/nextcloud/nextclouddb:/var/lib/mysql
+      - /mnt/somedrive/docker/nextcloud/nextclouddb:/var/lib/mysql
     ports:
       - 3306:3306
     environment:
@@ -83,6 +84,8 @@ services:
       - username=${COLLABORA_USER}
       - domain=${nextcloud_domain}
       - extra_params=--o:ssl.enable=false --o:ssl.termination=true
+    volumes:
+      - /mnt/somedrive/docker/nextcloud/collabora/coolwsd/coolwsd.xml:/etc/coolwsd/coolwsd.xml
     ports:
       - 9980:9980
 
@@ -113,6 +116,12 @@ services:
 5. Once the setup is complete, you will be redirected to the Nextcloud dashboard.
 
 _NOTE:_ I faced several issues mentioned, so please follow the below steps to resolve them if you face any issues.
+
+## Configure Two Factor Authentication in Nextcloud
+1. Go to `Nextcloud` --> `Apps` --> `Disabled Apps`, and enable the `Two Factor Authentication via Notifications` app.
+2. Go to `Nextcloud` --> `Settings` --> `Security` --> `Two-Factor Authentication` and enable `Notification`.
+3. Now, whenever you log in to Nextcloud, you will receive a notification on your phone to approve the login.
+
 
 # Troubleshooting Nextcloud Issues <a name="troubleshooting-nextcloud"></a>
 
@@ -191,6 +200,28 @@ I follower the steps mentioned in the link, by updating the `config.php` file to
 'overwriteprotocol' => 'https',
 ```
 This fixed the issue for me and was able to edit documents in Nextcloud using Collabora.
+
+## Configure Collabora to use only on specific domains
+
+If you want to configure Collabora to be used only on specific domains, you can do so by setting the `domain` environment variable in the `docker-compose.yml` file of the Collabora service.
+
+Also, you can update the `coolwsd.xml` file to allow only specific domains.
+1. Go to the `coolwsd.xml` file located in `/mnt/somedrive/docker/nextcloud/collabora/coolwsd/coolwsd.xml`.
+2. Update the `aliasgroups` section to include only the specific domains you want to allow. For example:
+```xml
+<alias_groups desc="default mode is 'first' it allows only the first host when groups are not defined. set mode to 'groups' and define group to allow multiple host and its aliases" mode="groups">
+<!--
+ If you need to use multiple wopi hosts, please change the mode to "groups" and
+                    add the hosts below.  If one host is accessible under multiple ip addresses
+                    or names, add them as aliases. 
+-->
+<group>
+<host desc="hostname to allow or deny." allow="true">https://subdomain.domain.com</host>
+</group>
+<!-- More "group"s possible here -->
+</alias_groups>
+```
+
 
 
 # Setup Next Cloud Client on your devices
