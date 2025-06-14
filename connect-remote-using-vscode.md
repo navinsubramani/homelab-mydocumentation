@@ -1,9 +1,11 @@
 # Table of Contents
-- [Connecting to Configuration File via VS Code](#connecting-to-configuration-file-via-vs-code)
-    - [Enable Source Control in VS Code and use Git](#enable-source-control-in-vscode-and-use-git)
+- [Connecting to remote machine via VS Code and ssh](#connecting-to-remote-machine-via-vs-code-and-ssh)
+- [Enable Source Control in VS Code and use Git](#enable-source-control-in-vscode-and-use-git)
+- [Clone an existing repository](#clone-an-existing-repository-using-vs-code-ssh)
+- [Setup Python project on a remote server using VS Code ssh](#setup-python-project-on-a-remote-server-using-vs-code-ssh)
 
 
-# Connecting to Configuration File via VS Code:
+# Connecting to remote machine via VS Code and ssh:
 1. Open VS Code.
 2. Install the "Remote - SSH" extension if you haven't already.
 3. Click on the `Remote Explorer` icon in the Activity Bar on the side of the window.
@@ -12,7 +14,7 @@
 6. Click on the `Connect` button to connect to your server.
 7. Once connected, navigate to the directory where your `working folder` is located, and open it in VS Code.
 
-## Enable Source Control in VS Code and use Git:
+# Enable Source Control in VS Code and use Git:
 1. Ensure that `Git` is installed on your server and your local machine. You can test this by running:
    ```bash
    git --version
@@ -47,3 +49,46 @@
    git push -u origin main
    ```
    Replace `main` with the name of your branch if it's different.
+
+# Clone an existing repository using VS Code SSH:
+1. If you already have a remote repository and want to clone it to your server, you can use the following command:
+   ```bash
+   git clone <remote_repository_url>
+   ```
+
+2. After cloning, you can open the cloned directory in VS Code and start working on your files. You can use the Source Control panel in VS Code to manage your commits, branches, and other Git operations.
+
+# Setup Python project on a remote server using VS Code ssh:
+
+1. Ensure that Python is installed on your remote server. You can check this by running:
+   ```bash
+   python3 --version
+   ```
+   If Python is not installed, you can install it using the package manager for your operating system. For example, on Ubuntu, you can run:
+   ```bash
+   sudo apt update
+   sudo apt install python3 python3-pip python3-venv
+   ```
+
+2. Create a virtual environment for your Python project:
+   ```bash
+   python3 -m venv .venv
+   ```
+
+3. Activate the virtual environment:
+   ```bash
+   source .venv/bin/activate
+   ```
+   You should see the virtual environment name in your terminal prompt as `(.venv) username@hostname:`.
+
+4. Install the required Python packages for your project using `pip`. If you have a `requirements.txt` file, you can install the packages by running:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+5. Run the Python script:
+   ```bash
+   python your_script.py
+   ```
+
+
