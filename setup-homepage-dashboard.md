@@ -36,14 +36,7 @@ PGID=1000
 5. Click on `Deploy the stack` button to deploy the stack.
 
 
-# Connecting to Configuration File via VS Code:
-1. Open VS Code.
-2. Install the "Remote - SSH" extension if you haven't already.
-3. Click on the `Remote Explorer` icon in the Activity Bar on the side of the window.
-4. Click on the `+` icon to add a new SSH target.
-5. Enter the SSH connection details for your server (e.g., `user@hostname` or `user@IP_address`).
-6. Click on the `Connect` button to connect to your server.
-7. Once connected, navigate to the directory where your `docker-compose.yml` file is located.
+**RECOMMENDATION: It is recommended to use VS code to connect to the remote service and edit the configuration files, and maintain the configuration files in a git repository. Please refer to the guide [here](connect-remote-using-vscode.md) to connect to the configuration file via VS Code.**
 
 
 # Edit the `services.yaml`, `widgets.yaml` and `settings.yaml` files to customize your dashboard:
