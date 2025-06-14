@@ -19,3 +19,4 @@ This repository contains information about how to set up a home lab like your ow
 - [Setup Pairdrop for File Transfer](setup-pairdrop.md)
 - [Setup Nextcloud for Cloud Storage](setup-nextcloud.md)
 - [Setup gethomepage.dev for Dashboard](setup-homepage-dashboard.md)
+- [Connect to Remote using VS Code](connect-remote-using-vscode.md)
