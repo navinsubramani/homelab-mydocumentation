@@ -21,4 +21,6 @@ This repository contains information about how to set up a home lab like your ow
 - [Setup gethomepage.dev for Dashboard](setup-homepage-dashboard.md)
 - [Connect to Remote using VS Code](connect-remote-using-vscode.md)
 - [Setup MySpeed for Speed Test](setup-myspeed.md)
-- **More Awesome Service: [Awesome Selfhosted](setup-awesome-homelabservice.md)**
+- [Setup Watchtower for Automatic Docker Updates](setup-watchtower.md)
+- [Setup Private Registry for Docker Images](setup-private-registry.md)
+- More Awesome Service: **[Awesome Selfhosted Services](setup-awesome-homelabservice.md)**
