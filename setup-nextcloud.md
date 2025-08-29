@@ -40,7 +40,6 @@ services:
       - 9280:80
       - 9243:443
     volumes:
-      - /mnt/somefolder/docker/nextcloud/html:/var/www/html
       - /mnt/somefolder/docker/nextcloud/html/customapps:/var/www/html/custom_apps
       - /mnt/somefolder/docker/nextcloud/html/config:/var/www/html/config
       - /mnt/somefolder/docker/nextcloud/html/data:/var/www/html/data
