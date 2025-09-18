@@ -171,6 +171,13 @@ If you encounter an error stating "Not a trusted domain" when accessing Nextclou
 
 This fixed the issue for me. After making this change, you should be able to access Nextcloud without any "Not a trusted domain" error.
 
+## Nextcloud should be updated through command line
+On certain occasion, nextcloud browser will throw a notification to update the system using command line. You should then login into the nextcloud system, and run the following command.
+
+```bash
+docker exec -u www-data <containername> php occ upgrade
+```
+
 # Setup Collabora in Nextcloud for editing documents <a name="setup-collabora"></a>
 
 _NOTE:_ Make sure both `nextcloud` and `collabora` containers are running and they are configured via `cloudflare tunnel` or any other reverse proxy to access them via a domain name.
