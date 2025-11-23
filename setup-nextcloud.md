@@ -8,6 +8,7 @@
   - [Incorrect username or password while logging in](#incorrect-username-or-password)
   - [Nextcloud does not have permission to write to the apps directory](#nextcloud-apps-permission-issue)
   - [Not a trusted domain](#nextcloud-trusted-domain-issue)
+  - [Update Nextcloud via command line](#Nextcloud-should-be-updated-through-command-line)
 - [Setup Collabora in Nextcloud for editing documents](#setup-collabora)
 - [Troubleshooting Collabora Issues](#troubleshooting-collabora)
   - [Collabora shows socket error when trying to edit a document](#collabora-socket-error)
