@@ -24,3 +24,7 @@
 1. To access the Home Assistant instance remotely, you can use the Cloudflare Tunnel Addon. Refer the [video documentation](https://www.youtube.com/watch?v=XoTmO4mLibw) for detailed steps on setting up Cloudflare Tunnel with Home Assistant.
 2. Once the Add-on is setup, you have to also `allow request` from cloudflare addon by enabling the reverse proxies. Follow the steps frmo the official documentation [here](https://github.com/brenner-tobias/addon-cloudflared/blob/main/cloudflared/DOCS.md).
 3. Restart the Home Assistant instance to apply the changes.
+
+# Configure the Home Assistant Alarm <a name="setup-alarm-homeassistant"></a>
+
+1. Reference: [ios critical alerts](https://companion.home-assistant.io/docs/notifications/critical-notifications/)
