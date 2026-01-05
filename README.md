@@ -23,4 +23,5 @@ This repository contains information about how to set up a home lab like your ow
 - [Setup MySpeed for Speed Test](setup-myspeed.md)
 - [Setup Watchtower for Automatic Docker Updates](setup-watchtower.md)
 - [Setup Private Registry for Docker Images](setup-private-registry.md)
+- [Setup LibreChat for Private ChatGPT Alternative](setup-librechat.md)
 - More Awesome Service: **[Awesome Selfhosted Services](setup-awesome-homelabservice.md)**
