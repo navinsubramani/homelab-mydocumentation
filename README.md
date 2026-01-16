@@ -1,5 +1,6 @@
 # Home Lab
-This repository contains information about how to set up a home lab like your own data center to host your own services like a cloud, media server sync it from phone, manage your data, and have critical services running on your own hardware.
+
+This repository contains information about how to set up a homelab like your own data center to host your own services like a cloud, media server sync it from phone, manage your data, and have critical services running on your own hardware.
 
 # System Overview
 
