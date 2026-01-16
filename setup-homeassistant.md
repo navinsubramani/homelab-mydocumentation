@@ -8,6 +8,8 @@
 - [Integrating Amcrest Camera to Home Assistant](#setup-amcrest-homeassistant)
 - [Configure Home Assistant Backup](#setup-backup-homeassistant)
 
+![Home Assistant](../static/Homeassistant_hardwares.png)
+
 # Install Home Assistant on Server <a name="installing-homeassistant"></a>
 1. Installing `Home Assistant` can be done using their documentation from their [website](https://www.home-assistant.io/installation/raspberrypi). The installation method recommended is using the Home Assistant OS image.
 2. Once installed, you can access Home Assistant by navigating to `http://homeassistant.local:8123` in your web browser.
